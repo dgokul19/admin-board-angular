@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'health-board'`, () => {
+  it(`should have as title 'admin-board-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('health-board');
+    expect(app.title).toEqual('admin-board-angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('health-board app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('admin-board-angular app is running!');
   });
 });

@@ -1,1 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;800&family=Poppins:ital,wght@0,100;0,400;0,700;1,500&display=swap');
+
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+:root {
+    --white : #ffffff;
+    ---black-222 : #222222;
+    --cyan : #00bd9d;
+    --grey-999 : #999;
+    --grey-ccc : #ccc;
+    --grey-eee : #eee;
+    --grey-fdf : #f3f3f9;
+    --sky-blue : #25a0e2;
+    --green : #00bd9d;
+    --sky-blue-opacity-8 : rgba(37, 160, 226, 0.85);
+    --red : rgb(255, 0, 8, 1);
+    // Box Shadow
+    --bx-shadow-1 : 0 2px 4px rgba(15,34,58,.12)
+}
+
+// Generic Styles
+.layout-container {
+    min-width: 80% !important;
+    max-width : 90% !important;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center !important;
+}
+.link{
+    cursor: pointer;
+}
+
+// button 
+.btn-primary{
+    height: 36px;
+    background-color: var(--sky-blue);
+    border: 1px solid var(--sky-blue);
+    padding: 6px 14px;
+    color: var(--white);
+    cursor: pointer;
+}

@@ -1,0 +1,74 @@
+.members-header{
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid var(--grey-eee);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    .mem-title-left, .mem-title-right{
+        height: 36px;
+        flex: 1;
+        input.form-control{
+            width: 70%;
+            height: 100%;
+            border: 1px solid var(--grey-ccc);
+            text-indent: 10px;
+            background-color: transparent;
+            border-radius: 4px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            height: 36px;
+            gap: 10px;
+            flex-direction: row-reverse;
+            li{
+                cursor: pointer;
+                .icon-member-title{
+                    width: 36px;
+                    height: 36px;
+                    font-size: 18px;
+                    display: grid;
+                    place-content: center;
+                    border: 1px solid var(--grey-eee);
+                    color: var(--grey-999);
+                    border-radius: 4px;
+                    &.more-ic{
+                        background-color: #32ccff4a;
+                        color: var(--sky-blue);
+                        border:none;
+                    }
+                }
+                &.active-view{
+                    .icon-member-title{
+                        background-color: var(--sky-blue);
+                        color: var(--white);
+                        border:none
+                    }
+                }
+                button {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    background-color: var(--green);
+                    border: 1px solid var(--green);
+                    line-height: 36px;
+                    padding: 0 16px;
+                    border-radius: 4px;
+                    color: var(--white);
+                    span{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.members-list{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 15px 0;
+    gap: 15px;
+}

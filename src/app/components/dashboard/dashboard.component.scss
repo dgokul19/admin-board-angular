@@ -1,0 +1,35 @@
+.dashboard-layout{
+    flex: 1;
+    height: calc(100% - 120px);
+    .dashboard-title-row{
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        align-items: center;
+        margin: 1rem 0;
+
+        h3{
+            font-size: .975rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(---black-222);
+        }
+        ul {
+            list-style: none;
+            font-size: .85rem;
+            display: flex;
+            color: var(---black-222);
+            gap: 10px;
+            li{
+                padding: 0 .1rem;
+                &.active-page{
+                    color: var(--sky-blue);
+                }
+            }
+            .ic-linked-nav{
+                font-size: 14px;
+                line-height: 23px;
+            }
+        }
+    }
+}

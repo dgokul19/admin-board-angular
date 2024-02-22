@@ -1,0 +1,18 @@
+<div class="members-header">
+    <div class="mem-title-left">
+        <input class="form-control" placeholder="Search for name or designation.." [ngModel]="searchMember" (ngModelChange)="searchKey($event)"/>
+    </div>
+    <div class="mem-title-right">
+        <ul>
+            <li>
+                <button><span class="material-symbols-outlined">add</span>Add Members</button>
+            </li>
+            <li><span class="icon-member-title more-ic material-symbols-outlined">more_vert</span></li>
+            <li [ngClass]="{'active-view' : currentView === viewModes.LIST}"><span class="icon-member-title material-symbols-outlined" (click)="updateView(viewModes.LIST)">list</span></li>
+            <li [ngClass]="{'active-view' : currentView === viewModes.GRID}"><span class="icon-member-title material-symbols-outlined" (click)="updateView(viewModes.GRID)">apps</span></li>
+        </ul>
+    </div>
+</div>
+<div class="members-list">
+    <app-person *ngFor="let member of membersList" [person]="member"></app-person>
+</div>

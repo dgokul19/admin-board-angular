@@ -1,0 +1,43 @@
+<div class="signupContainer">
+    <div class="contentBox">
+        <div class="contentInner contentLeft">
+            <img src="/assets/images/auth-one-bg.jpg" alt="signup image"/>
+            <h2 class="text-center">BMS Health App</h2>
+        </div>
+        <div class="contentInner contentRight">
+            <h3>Register Account</h3>
+            <span>Get your free BMS Account now..</span>
+
+            <form #signupForm="ngForm" (ngSubmit)="handleSubmit(signupForm)">
+                <div class="form-group">
+                    <label>Full Name*</label>
+                    <input #fullName="ngModel" class="form-control" name="fullName" ngModel required/>
+                    <span *ngIf="fullName.touched && fullName.invalid" min="3" class="form-info-text">Field is required !!</span>
+                </div>
+               
+                <div class="form-group">
+                    <label>Email*</label>
+                    <input class="form-control" name="email" ngModel required/>
+                </div>
+               
+                <div class="form-group">
+                    <label>Phone*</label>
+                    <input class="form-control" name="phone" ngModel required/>
+                </div>
+               
+                <div class="form-group">
+                    <label>Password</label>
+                    <input class="form-control icon-eye" name="password" ngModel required/>
+                </div>
+               
+                <div class="form-group">
+                    <label>Re-enter password</label>
+                    <input class="form-control icon-eye" name="re-password" ngModel required/>
+                </div>
+                
+                <button class="btn-primary">Register Your Account</button>
+                <span class="link text-center">Forgot your password ??</span>
+            </form>
+        </div>
+    </div>
+</div>

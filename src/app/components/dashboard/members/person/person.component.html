@@ -1,0 +1,30 @@
+<div class="person-container">
+   <div class="person-img-layer">
+        <img src="assets/images/img-10.jpg" alt="Profile Image" />
+        <div class="prof-edit">
+            <span class="icon-star material-symbols-outlined">star_rate</span>
+
+            <span class="icon-more material-symbols-outlined">more_horiz</span>
+        </div>
+   </div> 
+   <div class="person-image">
+        <span *ngIf="!person.imageUrl" class="default-section">{{person.identityLetters}}</span>
+        <img *ngIf="person.imageUrl"src="{{person.imageUrl}}" alt="{{person.fullName}}"/>
+   </div>
+   <div class="person-details">
+        <h4>{{person.fullName}}</h4>
+        <p>{{person.role}}</p>
+        <div class="info-box-row">
+            <div class="info-box">
+                <p>{{person.events}}</p>
+                <span>Events</span>
+            </div>
+            <div class="info-box">
+                <p>{{person.missions}}</p>
+                <span>Missions</span>
+            </div>
+        </div>
+        <button (click)="viewDetails(person.id)">View Profile</button>
+   </div>
+</div>
+ 
